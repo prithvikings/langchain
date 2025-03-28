@@ -157,7 +157,7 @@ const conversationChain = await createRetrievalChain({
 // Test
 const response = await conversationChain.invoke({
   chat_history: chatHistory,
-  input: "What is my lcel?",
+  input: "What is lcel?",
 });
 
 console.log(response);
