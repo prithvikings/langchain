@@ -17,7 +17,7 @@ Integrating chat history to improve chatbot context understanding.
 - A fake chat history is created to provide context for the chatbot, allowing it to respond appropriately to user inquiries.
 
 Fixing array input issue using messages placeholder in LangChain.
-- The placeholder expects text input, not an array, which can be corrected by using the messages placeholder.
+- The placeholder expects text input, not an array, which can be corrected by usin g the messages placeholder.
 - Incorporating a messages placeholder allows for injecting chat history into prompts, enhancing interaction responsiveness.
 
 Integrating chat history in a chatbot enhances response accuracy.
@@ -66,7 +66,7 @@ const model = new ChatGoogleGenerativeAI({
 
 // Use Cheerio to scrape content from webpage and create documents
 const loader = new CheerioWebBaseLoader(
-  "https://js.langchain.com/v0.1/docs/expression_language/"
+  "https://js.langchain.com/v0.1/docs/expression_language/",
 );
 const docs = await loader.load();
 
@@ -118,8 +118,8 @@ const retrieverChain = await createHistoryAwareRetriever({
 const chatHistory = [
   new HumanMessage("What does LCEL stand for?"),
   new AIMessage("LangChain Expression Language"),
-  new HumanMessage("My name is John"),
-    new AIMessage("Hello John!"),
+  new HumanMessage("My name is Prithvi"),
+    new AIMessage("Hello Prithvi!"),
 ];
 
 // Test: return only the documents
